@@ -1,28 +1,55 @@
----
-layout: default
----
-{% assign posts_count = (paginator.posts | size) %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in paginator.posts %}
-        <div class="post py3">
-          <p class="post-meta">{{ post.date | date: site.date_format }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <p class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </p>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Ian Tracey</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="eight columns offset-by-two" style="margin-top: 10%">
+        <h2 class="header">Ian Tracey</h2>
+          <ul class="menu">
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Writing</a></li>
+            <li><a>Hackathons</a></li>
+          </ul>
+          <p>Hi there! My name is Ian Tracey, a software engineer from Boston, MA now living in Tucson, AZ.</p>
+        <p>I believe in the potential software has to shape how we work, live and play. I am with obsessed with finding challenging problems and creating immense value out of the solutions.</p>
+        <p>I work at <a href="#">Latitude</a> tackling cloud API and infastructure for drone operations, mapping and imagery systems. Previously I have worked on moving money through the internet at  <a href="#">Braintree</a> and an enterprise social network at <a href="#">Cisco</a>.</p>
+        <p>Besides writing code and designing systems I love discovering great food and coffee, spending time on Spotify, learning new tools and technology and traveling.</p>
         </div>
-      {% endfor %}
-    </div>
+      </div>
+  </div>
 
-    {% include pagination.html %}
-  {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h3>
-  {% endif %}
-</div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
